@@ -1,0 +1,24 @@
+
+:root { --bg: #ffffff; --fg: #111111; --muted:#555; --card:#f6f6f6; }
+:root.dark { --bg: #0f1115; --fg: #f1f5f9; --muted:#9aa3af; --card:#161a22; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background: var(--bg); color: var(--fg); line-height:1.65; }
+.site-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.25rem; position:sticky; top:0; backdrop-filter:saturate(120%) blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid color-mix(in oklab, var(--muted) 20%, transparent); }
+.site-header nav a { margin:0 .75rem; text-decoration:none; color:var(--fg); font-weight:600; }
+.site-header nav a:hover { text-decoration:underline; }
+.logo img { height:32px; }
+main { max-width: 980px; padding: 1.25rem; margin: 0 auto; }
+.hero { display:grid; gap:1rem; grid-template-columns:1.2fr .8fr; align-items:center; }
+.hero h1 { font-size:clamp(1.8rem, 3.2vw, 3rem); margin:.25rem 0; }
+.hero .card { background:var(--card); padding:1rem; border-radius:12px; }
+.grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.card { background:var(--card); padding:1rem; border-radius:12px; }
+.card h3 { margin-top:.25rem; margin-bottom:.25rem; }
+.cta { display:inline-block; padding:.7rem 1rem; border-radius:10px; border:1px solid var(--muted); text-decoration:none; color:var(--fg); font-weight:700; }
+.site-footer { padding:2rem 1.25rem; text-align:center; color:var(--muted); }
+.post-list li { margin:.5rem 0; }
+.post-meta { color:var(--muted); font-size:.9rem; margin-bottom: .75rem; }
+article h1 { margin-bottom:.25rem; }
+blockquote { border-left: 4px solid var(--muted); padding-left:.75rem; color:var(--muted); }
+kbd { background:var(--card); border:1px solid color-mix(in oklab, var(--muted) 30%, transparent); padding:.15rem .35rem; border-radius:6px; font-size:.9em; }
+@media (max-width: 800px){ .hero { grid-template-columns: 1fr; } }
